@@ -3,7 +3,7 @@
 #include<regex>
 #include<fstream>
 using namespace std;
-
+#include "Catalogue.h"
 void raise_error(string txt_to_display) {
     cout << "usage: " << txt_to_display << "\nuse man analog for more informations" << endl;
 }
@@ -89,12 +89,25 @@ int main(int argc, char** argv) {
         raise_error("<filename.log>\n\t\tError when opening the file");
         return 0;
     }
-    if(g) {
-        ofstream dotfile(dotfile_str.c_str());
+	Catalogue c;
+	c.Charger(logfile,e,temps);
+	if(t){
+		if(temps != "23"){ 
+		cout << "Warning : only hits between " << temps << "h and " << atoi(temps.c_str())+1 << "h have been taken into account" << endl;
+ 		}else{
+		cout << "Warning : only hits between 23h and 0h have been taken into account" << endl;
+		}
+	}
+	c.AfficherparDefaut();
+	if(g){
+       ofstream dotfile(dotfile_str.c_str());
         if(!dotfile) {
             raise_error("<filename.dot>\n\t\tError when opening the file");
             return 0;
-        }
-    }
+        }else{
+		cout << "Dot-file " << dotfile_str << " generated" << endl;
+		c.GraphViz(dotfile);
+		}
+	}
     return 0;
 }
