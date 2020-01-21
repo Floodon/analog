@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<regex>
+#include<fstream>
 using namespace std;
 
 void raise_error(string txt_to_display) {
@@ -12,7 +13,7 @@ int main(int argc, char** argv) {
     bool g = false;
     bool e = false;
     bool t = false;
-    string dotfile;
+    string dotfile_str;
     string temps = "-1";
     if(argc==1) {
         raise_error("[options] <filename.log>\n \toptions:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>");
@@ -35,7 +36,7 @@ int main(int argc, char** argv) {
                     }
                     g = true;
                     i++;
-                    dotfile = argv[i];
+                    dotfile_str = argv[i];
                 } else {
                     raise_error("-g <filename.dot> <filename.log>\n\t\tyou can't use -g twice");
                     return 0;
@@ -77,10 +78,23 @@ int main(int argc, char** argv) {
         }
         i++;
     }
+    i--;
     regex log {"^.*\\.log"};
-    if(!regex_match(argv[i-1],log)) {
+    if(!regex_match(argv[i],log)) {
         raise_error("<filename.log> expected\n\t\tVerify your file has the right extension");
         return 0;
+    }
+    ifstream logfile(argv[i]);
+    if(!logfile) {
+        raise_error("<filename.log>\n\t\tError when opening the file");
+        return 0;
+    }
+    if(g) {
+        ofstream dotfile(dotfile_str.c_str());
+        if(!dotfile) {
+            raise_error("<filename.dot>\n\t\tError when opening the file");
+            return 0;
+        }
     }
     return 0;
 }
