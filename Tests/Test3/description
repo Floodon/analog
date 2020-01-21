@@ -1,1 +1,1 @@
-Test du code retour du programme correct
+Ce test permet de vérifier si le programme peut exclure tous les documents qui ont une extension de type image, css ou javascript.

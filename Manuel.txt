@@ -1,0 +1,36 @@
+User Commands
+
+NAME 
+	analog - list the 10 most popular sites and convert log file into Graph Viz 
+
+SYNOPSIS
+	analog [OPTION]... [FILE]...
+
+DESCRIPTION
+	Read the log file(FILE) and list the 10 most popular sites in the standard output.
+	File name should end with .log
+
+	-e  Ignore all the images and files that end with .css or .js
+
+	-t hour  Ignore all the hits that have been done before "hour" and after "hour+1". That is to say, only hits that have been done between [hour,hour+1[ will be taken into account. Here, "hour" should be a natural number between [0,23].
+
+	-g FILE  Convert the log file into GraphViz format and save it in the FILE. File name should end with .dot
+		
+EXAMPLES	
+	./analog -e -t 12 test.log
+	Read the test.log, the program will not take images, file.css or file.js into account. And it will only focus on hits that have been done between 12:00 and 12:59. Then it will print the 10 most popular sites on the standard output.
+	./analog -g graph.dot test.log
+	Read the test.log and convert the log file into GraphViz. Save it in the file called graph.dot. The program also prints the 10 most popular sites on the standard output, but without any kind of selection.
+
+AUTHOR
+	Written by Enzo Boscher and Tuoyuan Tan.
+
+REPORTING BUGS
+	Report bugs to <tuoyuan.tan@insa-lyon.fr>
+
+COPYRIGHT
+	This is free software: you are free to change and redistribute it. There is no warranty, to the extent permitted by law.
+
+
+
+	
