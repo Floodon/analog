@@ -4,7 +4,7 @@
 using namespace std;
 
 void raise_error(string txt_to_display) {
-    cout << "usage: " << txt_to_display << endl;
+    cout << "usage: " << txt_to_display << "\nuse man analog for more informations" << endl;
 }
 
 
@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     string dotfile;
     string temps = "-1";
     if(argc==1) {
-        raise_error("[options] <filename.log>\n \toptions:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>\nuse man analog for more informations");
+        raise_error("[options] <filename.log>\n \toptions:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>");
         return 0;
     }
     int i = 1;
