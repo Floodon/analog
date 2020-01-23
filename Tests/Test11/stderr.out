@@ -1,0 +1,3 @@
+usage: -t <hour> <filename.log
+		Hour needs to be between 0 & 23
+use man analog for more informations

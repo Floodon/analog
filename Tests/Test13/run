@@ -1,0 +1,1 @@
+../../bin/analog -t 12 -t 15 test.log

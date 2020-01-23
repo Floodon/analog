@@ -5,7 +5,7 @@
 using namespace std;
 #include "Catalogue.h"
 void raise_error(string txt_to_display) {
-    cout << "usage: " << txt_to_display << "\nuse man analog for more informations" << endl;
+    cerr << "usage: " << txt_to_display << "\nuse man analog for more informations" << endl;
 }
 
 
@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
             if(argv[i][1] == 'g') {
                 if(!g) {    
                     regex dot {"^.*\\.dot"};
-                    if(argc >= i+2 ) {
+                    if(argc >= i+3 ) {
                         if(!regex_match(argv[i+1],dot)) {
                             raise_error("-g <filename.dot> <filename.log>\n\t\tFile needs to have .dot extension");
                             return 21;
@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
                 }
             } else if(argv[i][1] == 't') {
                 if(!t) {    
-                    if(argc >= i+2 ) {
+                    if(argc >= i+3 ) {
                         regex number {"[[:digit:]]+"};
                         if(!regex_match(argv[i+1],number)) {
                             raise_error("-t <hour> <filename.log>\n\t\tHour needs to be a positive number");
@@ -72,7 +72,7 @@ int main(int argc, char** argv) {
                     return 0;
                 }
             } else {
-                raise_error("options accepted:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>\nuse man analog for more informations");
+                raise_error("options accepted:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>");
                 return 22;
             }
         }

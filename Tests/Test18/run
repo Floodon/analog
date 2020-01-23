@@ -1,0 +1,1 @@
+../../bin/analog -g .dot test.log

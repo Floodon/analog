@@ -1,0 +1,3 @@
+usage: -t <hour> <filename.log>
+		-t needs an hour
+use man analog for more informations

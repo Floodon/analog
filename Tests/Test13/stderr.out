@@ -1,0 +1,3 @@
+usage: -t <hour> <filename.log>
+		you can't use -t twice
+use man analog for more informations

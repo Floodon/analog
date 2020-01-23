@@ -1,0 +1,5 @@
+usage: options accepted:
+		-g <filename.dot>
+		-e
+		-t <heure>
+use man analog for more informations

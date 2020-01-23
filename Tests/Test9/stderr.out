@@ -1,0 +1,3 @@
+usage: -e <filename.log>
+		you can't use -e twice
+use man analog for more informations

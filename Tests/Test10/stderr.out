@@ -1,0 +1,3 @@
+usage: -t <hour> <filename.log>
+		Hour needs to be a positive number
+use man analog for more informations

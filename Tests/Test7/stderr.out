@@ -1,0 +1,3 @@
+usage: -g <filename.dot> <filename.log>
+		-g needs a file with the .dot extension
+use man analog for more informations

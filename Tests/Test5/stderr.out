@@ -1,0 +1,6 @@
+usage: [options] <filename.log>
+ 	options:
+		-g <filename.dot>
+		-e
+		-t <heure>
+use man analog for more informations

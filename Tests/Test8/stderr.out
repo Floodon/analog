@@ -1,0 +1,3 @@
+usage: -g <filename.dot> <filename.log>
+		you can't use -g twice
+use man analog for more informations
