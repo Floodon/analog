@@ -1,5 +1,13 @@
 Test ID;Return code validation;Out result;StdErr result;File creation result;Global result
-Test1;1;1;1;2;1
+Test01;1;1;1;2;1
+Test02;1;1;1;1;1
+Test03;1;1;1;1;1
+Test04;1;1;1;1;1
+Test05;1;1;1;2;1
+Test06;1;1;1;2;1
+Test07;1;1;1;2;1
+Test08;1;1;1;2;1
+Test09;1;1;1;2;1
 Test10;1;1;1;2;1
 Test11;1;1;1;2;1
 Test12;1;1;1;2;1
@@ -8,13 +16,5 @@ Test14;1;1;1;2;1
 Test15;1;1;1;2;1
 Test16;1;1;1;2;1
 Test17;1;1;1;2;1
-Test18;1;0;0;2;0
+Test18;1;1;1;2;1
 Test19;1;1;1;1;1
-Test2;1;1;1;1;1
-Test3;1;1;1;1;1
-Test4;1;1;1;1;1
-Test5;1;1;1;2;1
-Test6;1;1;1;2;1
-Test7;1;1;1;2;1
-Test8;1;1;1;2;1
-Test9;1;1;1;2;1

@@ -1,3 +1,6 @@
-usage: <filename.log>
-		Error when opening the file
+usage: options accepted:
+		-g <filename.dot>
+		-e
+		-t <hour>
+		Please don't forget to input a '-' before the option
 use man analog for more informations

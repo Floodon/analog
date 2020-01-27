@@ -16,7 +16,7 @@ int main(int argc, char** argv) {
     string dotfile_str;
     string temps = "-1";
     if(argc==1) {
-        raise_error("[options] <filename.log>\n \toptions:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>");
+        raise_error("[options] <filename.log>\n \toptions:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <hour>");
         return 20;
     }
     int i = 1;
@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
                 return 22;
             }
         } else {
-	    	raise_error("options accepted:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>\n\t\tPlease don't forget to input a '-' before the option");
+	    	raise_error("options accepted:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <hour>\n\t\tPlease don't forget to input a '-' before the option");
 	    return 21;
 		}
         i++;
