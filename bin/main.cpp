@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
         return 20;
     }
     int i = 1;
-    while(i != argc) {
+    while(i != argc-1) {
         if(argv[i][0] == '-') {
             if(argv[i][1] == 'g') {
                 if(!g) {    
@@ -76,12 +76,11 @@ int main(int argc, char** argv) {
                 return 22;
             }
         } else {
-	    raise_error("options accepted:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>\n\t\tPlease don't forget to input a '-' before the option");
+	    	raise_error("options accepted:\n\t\t-g <filename.dot>\n\t\t-e\n\t\t-t <heure>\n\t\tPlease don't forget to input a '-' before the option");
 	    return 21;
-	}
+		}
         i++;
     }
-    i--;
     regex log {"^.*\\.log"};
     if(!regex_match(argv[i],log)) {
         raise_error("<filename.log> expected\n\t\tVerify your log file has the .log extension");
